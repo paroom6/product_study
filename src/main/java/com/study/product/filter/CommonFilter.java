@@ -18,9 +18,9 @@ public class CommonFilter extends HttpFilter implements Filter {
    
     public CommonFilter() {
         super();
-            }
+    }
 
-
+    public void destroy() {}
 
 
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
@@ -32,6 +32,6 @@ public class CommonFilter extends HttpFilter implements Filter {
 		chain.doFilter(request, response);
 	}
 
-
+	public void init(FilterConfig fConfig) throws ServletException {}
 
 }
