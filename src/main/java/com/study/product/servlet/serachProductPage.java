@@ -21,7 +21,10 @@ public class serachProductPage extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setAttribute("productList", productService.searchProduct());
 		request.getRequestDispatcher("WEB-INF/views/searh.jsp").forward(request, response);
-
+		//mvc: model view controller
+		//model : 데이터객체 (setAttribute, getAttribute)
+		//view : html(화면),jsp
+		//controller: model, view 를 제어, 요청, 응답 처리 -> servlet
 	}
 
 
